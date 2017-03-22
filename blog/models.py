@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 # Create your models here.
 
 # post model with title,description,author,created at, published at as properties
@@ -12,7 +13,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
 
-    def publishe(self):
+    def publish(self):
         self.published_date = timezone.now()
         self.save()
 
